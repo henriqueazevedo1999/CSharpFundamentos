@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ExemploSeparandoEmClasses.Tratamento_Exceção;
+using ExemploSeparandoEmClasses.While;
+using System;
+using Util;
 
 namespace ExemploSeparandoEmClasses
 {
@@ -34,6 +37,18 @@ namespace ExemploSeparandoEmClasses
                         {
                             var comprarCurso = new ComprarCurso();
                             comprarCurso.Executar();
+                            break;
+                        }
+                    case OpcoesMenu.Principal.While:
+                        {
+                            var menu = new MenuWhile();
+                            menu.Apresentar();
+                            break;
+                        }
+                    case OpcoesMenu.Principal.TratamentoExcecao:
+                        {
+                            var menu = new TratamentoExcecao();
+                            menu.Executar();
                             break;
                         }
                     default:

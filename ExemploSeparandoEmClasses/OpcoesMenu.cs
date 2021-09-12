@@ -18,6 +18,12 @@ namespace ExemploSeparandoEmClasses
 
             [Description("Comprar Curso")]
             ComprarCurso,
+
+            [Description("While")]
+            While,
+
+            [Description("Tratamento de exceção")]
+            TratamentoExcecao,
         }
 
         public enum AreasCursos

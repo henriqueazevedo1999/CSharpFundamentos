@@ -1,4 +1,5 @@
 ﻿using System;
+using Util;
 
 namespace ExemploSeparandoEmClasses
 {
@@ -6,7 +7,7 @@ namespace ExemploSeparandoEmClasses
     {
         private OpcoesMenu.AreasCursos areaEscolhida;
 
-        var cursoEscolhido;
+        //var cursoEscolhido;
 
         public void Executar()
         {
