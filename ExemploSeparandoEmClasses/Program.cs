@@ -9,18 +9,21 @@ namespace ExemploSeparandoEmClasses
     {
         static void Main(string[] args)
         {
-            Menu.Principal();
-
-            OpcoesMenu.Principal opcaoEscolhida;
+            OpcoesMenu.Principal opcaoEscolhida = OpcoesMenu.Principal.Sair;
 
             do
             {
+                Menu.Principal();
                 Console.WriteLine("Digite a opção desejada: ");
 
                 opcaoEscolhida = ConsoleEx.ReadLineAsEnum<OpcoesMenu.Principal>();
 
                 switch (opcaoEscolhida)
                 {
+                    case OpcoesMenu.Principal.Sair:
+                        {
+                            break;
+                        }
                     case OpcoesMenu.Principal.CalcularImc:
                         {
                             var calcularImc = new CalcularImc();
@@ -48,6 +51,42 @@ namespace ExemploSeparandoEmClasses
                     case OpcoesMenu.Principal.TratamentoExcecao:
                         {
                             var menu = new TratamentoExcecao();
+                            menu.Executar();
+                            break;
+                        }
+                    case OpcoesMenu.Principal.For_ExecutarSolicitacaoInformacao:
+                        {
+                            var menu = new ExemploFor();
+                            menu.ExecutarSolicitacaoInformacao();
+                            break;
+                        }
+                    case OpcoesMenu.Principal.For_ApresentarNumerosDecrescentes:
+                        {
+                            var menu = new ExemploFor();
+                            menu.ExecutarApresentacaoNumerosDecrescentes();
+                            break;
+                        }
+                    case OpcoesMenu.Principal.For_ExecutarFatorial:
+                        {
+                            var menu = new ExemploFor();
+                            menu.ExecutarFatorial();
+                            break;
+                        }
+                    case OpcoesMenu.Principal.For_ApresentarRelogio:
+                        {
+                            var menu = new ExemploFor();
+                            menu.ApresentarRelogio();
+                            break;
+                        }
+                    case OpcoesMenu.Principal.For_ExecutarCompraLoja:
+                        {
+                            var menu = new ExemploFor();
+                            menu.ExecutarCompraLoja();
+                            break;
+                        }
+                    case OpcoesMenu.Principal.For_Exemplo2:
+                        {
+                            var menu = new ExemploFor02();
                             menu.Executar();
                             break;
                         }

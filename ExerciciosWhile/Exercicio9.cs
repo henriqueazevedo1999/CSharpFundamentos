@@ -14,7 +14,7 @@ namespace ExerciciosWhile
             int numero = numeroInicial;
             int fatorial = numero - 1;
 
-            while (numero > 0)
+            while (numero > 1)
             {
                 fatorial *= numero;
                 numero--;

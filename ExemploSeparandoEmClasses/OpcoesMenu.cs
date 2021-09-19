@@ -24,6 +24,24 @@ namespace ExemploSeparandoEmClasses
 
             [Description("Tratamento de exceção")]
             TratamentoExcecao,
+
+            [Description("For - Executar Solicitação de Informação")]
+            For_ExecutarSolicitacaoInformacao,
+
+            [Description("For - Apresentar Números Decrescentes")]
+            For_ApresentarNumerosDecrescentes,
+
+            [Description("For - Executar Fatorial")]
+            For_ExecutarFatorial,
+
+            [Description("For - Apresentar Relógio")]
+            For_ApresentarRelogio,
+
+            [Description("For - Executar Compra Loja")]
+            For_ExecutarCompraLoja,
+
+            [Description("For - Exemplo 2")]
+            For_Exemplo2,
         }
 
         public enum AreasCursos
@@ -71,6 +89,27 @@ namespace ExemploSeparandoEmClasses
             JavaScript,
         }
 
+        public enum Loja
+        {
+            [Description("Sair")]
+            Sair = 0,
+
+            [Description("Jogo do ano R$ 350,00")]
+            JogoDoAno,
+
+            [Description("PC master race R$ 14790,00")]
+            PCMasterRace,
+
+            [Description("Monitor 120Hz com free sync R$ 2500,20")]
+            Monitor120Hz,
+
+            [Description("Cadeira Herman Miller R$ 12000,00")]
+            CadeiraHermanMiller,
+
+            [Description("Microfone para live R$ 2500.12")]
+            MicrofoneParaLive,
+        }
+
         public static Dictionary<CursosIdiomas, double> ValoresCursosIdiomas = new()
         {
             { CursosIdiomas.Alemao, 275.00 },
@@ -84,6 +123,15 @@ namespace ExemploSeparandoEmClasses
             { CursosProgramacao.CSharp, 3000 },
             { CursosProgramacao.Java, 2500 },
             { CursosProgramacao.JavaScript, 1000 },
+        };
+
+        public static Dictionary<Loja, double> ValoresItensLoja = new()
+        {
+            { Loja.JogoDoAno, 350 },
+            { Loja.PCMasterRace, 14079 },
+            { Loja.Monitor120Hz, 2500.20 },
+            { Loja.CadeiraHermanMiller, 12000 },
+            { Loja.MicrofoneParaLive, 2500.12 },
         };
     }
 }

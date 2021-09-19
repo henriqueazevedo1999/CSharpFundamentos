@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace ExemploSeparandoEmClasses
 {
@@ -8,6 +9,12 @@ namespace ExemploSeparandoEmClasses
         {
             Console.WriteLine("Menu");
             ImprimeOpcoes<OpcoesMenu.Principal>();
+        }
+
+        public static void Loja()
+        {
+            Console.WriteLine("Menu");
+            ImprimeOpcoes<OpcoesMenu.Loja>();
         }
 
         public static void AreasCursos()
@@ -30,9 +37,10 @@ namespace ExemploSeparandoEmClasses
 
         private static void ImprimeOpcoes<T>()
         {
+            int maiorOpcao = Enum.GetValues(typeof(T)).Cast<int>().Max().ToString().Length;
             foreach (int opcao in Enum.GetValues(typeof(T)))
             {
-                Console.WriteLine($"   {opcao} - {EnumExtender.GetDescription((Enum)Enum.Parse(typeof(T), opcao.ToString()))}");
+                Console.WriteLine($"   {opcao.ToString().PadLeft(maiorOpcao, '0')} - {EnumExtender.GetDescription((Enum)Enum.Parse(typeof(T), opcao.ToString()))}");
             }
         }
     }
