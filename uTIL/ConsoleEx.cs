@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 
 namespace Util
 {
@@ -50,7 +52,7 @@ namespace Util
         public static double ReadLineAsDouble(bool emptyAsZero = false)
         {
             string input = Console.ReadLine().Replace(',', '.');
-            
+
             if (string.IsNullOrEmpty(input) && emptyAsZero)
             {
                 return 0;
@@ -96,6 +98,29 @@ namespace Util
         public static string ReadLineAsString()
         {
             return Console.ReadLine();
+        }
+
+        public static bool ReadValueWithValidations(out int value, params Func<int, bool>[] validations)
+        {
+            bool valueOk = ReadLineAsInt(out value);
+            if (!valueOk)
+                return false;
+
+            foreach (var validation in validations)
+            {
+                if (!validation(value))
+                    return false;
+            }
+
+            return true;
+        }
+    }
+
+    public static class Util
+    {
+        public static Dictionary<Tkey, Tvalue> GetOrderedDictionary<Tkey, Tvalue>(Dictionary<Tkey, Tvalue> dictionary)
+        {
+            return dictionary.OrderBy(x => x.Key).ToDictionary(x => x.Key, x => x.Value);
         }
     }
 }

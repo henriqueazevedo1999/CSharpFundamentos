@@ -90,6 +90,12 @@ namespace ExemploSeparandoEmClasses
                             menu.Executar();
                             break;
                         }
+                    case OpcoesMenu.Principal.ExemploVetor:
+                        {
+                            var menu = new Vetor.Vetor();
+                            menu.Exemplo04();
+                            break;
+                        }
                     default:
                         Console.WriteLine("Opção inválida");
                         break;

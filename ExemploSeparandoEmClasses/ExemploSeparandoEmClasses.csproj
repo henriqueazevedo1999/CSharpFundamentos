@@ -6,7 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Collections.Specialized" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\uTIL\Util.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.pt-BR.resx">
+      <CustomToolNamespace></CustomToolNamespace>
+      <Generator></Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

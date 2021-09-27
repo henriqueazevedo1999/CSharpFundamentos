@@ -42,6 +42,9 @@ namespace ExemploSeparandoEmClasses
 
             [Description("For - Exemplo 2")]
             For_Exemplo2,
+
+            [Description("Exemplo vetor")]
+            ExemploVetor,
         }
 
         public enum AreasCursos
